@@ -1,6 +1,15 @@
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import AllScenes from "./pages/AllScenes";
+import './App.css';
+
 function App() {
   return (
-    <div>Hello</div>
+    <Layout>
+      <Routes>
+        <Route path='/' element={<AllScenes />}></Route>
+      </Routes>
+    </Layout>
   );
 }
 
