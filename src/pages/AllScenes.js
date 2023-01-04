@@ -4,7 +4,7 @@ import Main from "../components/layout/Main";
 import Sidebar from "../components/layout/Sidebar";
 
 function AllScenes() {
-    const [scenes, setScenes] = useState(JSON.parse(localStorage.getItem("scenes"))||[])
+    const [scenes, setScenes] = useState(JSON.parse(localStorage.getItem("scenes")) || [])
     const [activeScene, setActiveScene] = useState(false);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function AllScenes() {
         };
 
         setScenes([newScene, ...scenes]);
-    }  
+    }
 
     const onDeleteScene = (idToDelete) => {
         setScenes(scenes.filter((scene) => scene.id !== idToDelete))
@@ -32,7 +32,7 @@ function AllScenes() {
 
     const onUpdateScene = (updatedScene) => {
         const updatedScenes = scenes.map((scene) => {
-            if(scene.id === activeScene) {
+            if (scene.id === activeScene) {
                 return updatedScene;
             }
             return scene;
@@ -40,13 +40,13 @@ function AllScenes() {
 
         setScenes(updatedScenes);
     }
- 
+
     return <div className="App">
-        <Sidebar 
+        <Sidebar
             scenes={scenes}
             onAddScene={onAddScene}
             onDeleteScene={onDeleteScene}
-            activeScene={activeScene} 
+            activeScene={activeScene}
             setActiveScene={setActiveScene}
         ></Sidebar>
         <Main activeScene={getActiveScene()} onUpdateScene={onUpdateScene}></Main>

@@ -14,9 +14,11 @@ body,
   height: 100vh;
   overflow: hidden;
   font-size: 16px;
+  background-color: rgb(240, 240, 240) ;
+
 }
 
-button {
+/* button {
   background: none;
   border: 0;
   margin: 0;
@@ -28,6 +30,21 @@ button {
 }
 button:hover {
   color: #04c;
+} */
+
+button {
+  border: 1px solid blue;
+  background-color: lightblue;
+  color: blue;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  transition: background-color .1s ease-in, color .1s ease-in;
+}
+
+button:hover {
+  background-color: blue;
+  color: lightblue;
 }
 
 .App {

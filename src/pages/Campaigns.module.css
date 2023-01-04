@@ -1,0 +1,31 @@
+.list {
+    margin: auto;
+    width: 500px;
+    margin-top: 32px;
+}
+
+.listItem {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.1s ease-in;
+
+}
+
+.listItem:hover {
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+
+.titleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.noButton {
+    margin-right: 8px;
+}
